@@ -17,8 +17,8 @@ int main() {
 	STUDENT s5 = { "E",sophomore,80,NULL };
 	s1.next = &s2;
 	s2.next = &s3;
-	s3.next = &s3;
-	s4.next = &s4;
+	s3.next = &s4;
+	s4.next = &s5;
 
 	STUDENT* list = &s1;
 }
