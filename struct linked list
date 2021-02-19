@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+enum level { freshman = 1,sophomore,junior,senior };
+struct student {
+	char name[20];
+	enum level year;
+	int score;
+	struct student* next;
+};
+typedef struct student STUDENT;
+
+int main() {
+	STUDENT s1 = { "A",sophomore,80,NULL };
+	STUDENT s2 = { "B",freshman,80,NULL};
+	STUDENT s3 = { "C",freshman,80,NULL };
+	STUDENT s4 = { "D",junior,80,NULL };
+	STUDENT s5 = { "E",sophomore,80,NULL };
+	s1.next = &s2;
+	s2.next = &s3;
+	s3.next = &s3;
+	s4.next = &s4;
+
+	STUDENT* list = &s1;
+}
+
+
+
+
