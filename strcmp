@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include<string.h>
+
+enum level { freshman = 1,sophomore,junior,senior };
+struct student {
+	char name[20];
+	enum level year;
+	int score;
+	struct student* next;
+};
+typedef struct student STUDENT;
+
+void printList(STUDENT* list,char *name) {
+	int flag=0;
+	while (list) {
+		if (strcmp(list->name, name) == 0) {
+			
+			flag = 1;
+			break;
+		}
+		list = list->next;		
+	}
+	if (flag == 1) {
+		printf("%s : %d %d\n", list->name, list->year, list->score);
+	}
+}
+int main() {
+	STUDENT s1 = { "bob",sophomore,80,NULL };
+	STUDENT s2 = { "harry",freshman,70,NULL};
+	STUDENT s3 = { "wendy",freshman,65,NULL };
+	STUDENT s4 = { "sara",junior,60,NULL };
+	STUDENT s5 = { "kim",sophomore,90,NULL };
+	s1.next = &s2;
+	s2.next = &s3;
+	s3.next = &s4;
+	s4.next = &s5;
+
+	STUDENT* list = &s1;
+	printList(list,"bob");
+	
+
+}
+
+
+
+
