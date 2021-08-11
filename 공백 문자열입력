@@ -1,0 +1,22 @@
+#include<iostream>
+#include<string>
+
+//공백이 있는 문자열 입력받기
+
+using namespace std;
+
+int main(){
+
+   string str;
+   
+   getline(cin,str);
+   
+   cout<<str;
+   
+   char c[30];
+   
+   cin.getline(c,30);
+   cout<<c;
+
+
+}
