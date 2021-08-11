@@ -1,0 +1,20 @@
+import java.util.Scanner;
+public static void main(String[] args){
+        //중복 제거
+        HashSet<Integer> set = new HashSet<Integer>(); 
+        set.add(1); 
+        set.add(2); 
+        set.add(2);
+        set.add(1);
+        
+        set.remove(1);
+        Iterator<Integer> it=set.iterator();
+        while(it.hasNext()){
+            System.out.print(it.hasNext());
+        }
+
+}
+
+
+
+
