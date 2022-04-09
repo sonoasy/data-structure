@@ -1,0 +1,5 @@
+- program=data structure+algorithm
+- Algorithm 표현 방법: Natural language/Flow chart/Pseudo code/programming language
+- Data type
+- Execution time
+- complexity-> Time complexity(Big O /Big Ω/Big θ Notation), Spatial complexity
